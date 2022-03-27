@@ -71,6 +71,24 @@
         z-index: 1001;
     }
 
+    /*Social Media icons*/
+    ion-icon:hover {
+        transform: translateY(0px);
+        transition: 0s;
+    }
+
+    ion-icon:active {
+        transform: translateY(5px);
+        transition: 0.2s;
+        color: #002626;
+    }
+
+    .home_social a:hover {
+        transform: translateY(0px);
+        transition: 0s;
+        color: #008080;
+    }
+
     /* Home */
     .container,
     #home {
@@ -432,6 +450,17 @@
             margin: 0;
             margin-top: 50px;
             justify-content: center;
+        }
+
+        .social_footer a:hover {
+            transform: translateY(-5px);
+            transition: 0s;
+        }
+
+        .social_footer a:active {
+            transform: translateY(-5px);
+            transition: 0.2s;
+            color: #002626;
         }
 
         .row_copyright {
