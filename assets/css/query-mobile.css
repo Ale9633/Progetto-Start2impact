@@ -25,7 +25,6 @@
     .anchor5 {
         position: absolute;
         height: 80%;
-
     }
 
     .anchor6 {
@@ -68,7 +67,7 @@
         position: fixed;
         justify-content: center;
         top: -100px;
-        z-index: 1001;
+        z-index: 1000;
     }
 
 
@@ -99,7 +98,7 @@
 
     .home_text p {
         font-size: 17px;
-        text-align: center;
+        text-align: left;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -204,7 +203,7 @@
         margin-left: 20px;
         margin-right: 20px;
         margin-top: -90px;
-        text-align: center;
+        text-align: left;
     }
 
     .about_cta {
@@ -227,18 +226,73 @@
     .services_container {
         width: 100%;
         justify-content: center;
+        align-content: space-between;
         border-radius: 0;
     }
 
-    .services_box {
-        margin-top: -35px;
+    .services_container .services_box .face,
+    .services_container .services_box1 .face {
+        width: 300px;
+        height: 180px;
+        transition: 0.5s;
+    }
+
+    .services_container .services_box .face.face2,
+    .services_container .services_box1 .face.face2 {
+        position: relative;
+        background: #002626;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        transform: translateY(-100px);
+    }
+
+    .services_container .services_box:hover .face.face1,
+    .services_container .services_box1:hover .face.face1 {
+        background: #002626;
+        transform: translateY(0);
+    }
+
+    .services_container .services_box .face.face1,
+    .services_container .services_box1 .face.face1 {
+        position: relative;
+        background: #002626;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .services_container .services_box .face.face2,
+    .services_container .services_box1 .face.face2 {
+        position: relative;
+        background: #002626;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .services_box,
+    .services_box1 {
+        margin-top: 35px;
+        box-shadow: -1rem 0 3rem;
     }
 
     .services_container .services_box .face.face2 .content p,
     .services_container .services_box1 .face.face2 .content p {
         margin: 0;
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
 
     .services_container .services_box .face.face2 .content a,
@@ -253,24 +307,38 @@
 
     /* Portfolio */
     #portfolio {
-        width: 100%;
-        box-sizing: border-box;
         display: flex;
-        flex-direction: column;
         justify-content: center;
+        align-items: center;
         height: auto;
     }
 
-    .thumbnail {
-        height: 70%;
-        width: 85%;
-        margin-top: -100px;
+    .thumbnail__subtitle {
+        opacity: 1;
     }
 
-    .thumbnail1 {
-        height: 70%;
-        width: 85%;
-        margin-top: 120px;
+    .thumbnail:before,
+    .thumbnail:after,
+    .thumbnail1:before,
+    .thumbnail1:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        transition: none;
+    }
+
+    .thumbnail__img {
+        filter: opacity(20%) blur(5px);
+    }
+
+    .thumbnail:hover .thumbnail__img,
+    .thumbnail1:hover .thumbnail__img {
+        transform: scale(1) opacity(20%) blur(1px);
+        filter: opacity(20%) blur(1px);
+        transition-delay: 0s, .2s;
     }
 
 
@@ -318,7 +386,7 @@
         margin-top: -40px;
         margin-left: 20px;
         margin-right: 20px;
-        text-align: center;
+        text-align: left;
     }
 
 
@@ -329,6 +397,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 100px 0;
         height: auto;
     }
 

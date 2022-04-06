@@ -180,3 +180,10 @@ ScrollTrigger.matchMedia({
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////
+
+const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("."),
+    smooth: true
+  });
+  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+  locoScroll.on(".", ScrollTrigger.update);
