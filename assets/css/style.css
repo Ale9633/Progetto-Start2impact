@@ -1130,6 +1130,7 @@ ion-icon:active {
 .services_container .services_box1 {
     position: relative;
     cursor: pointer;
+    border-radius: 30px;
 }
 
 .services_container .services_box .face,
@@ -1155,6 +1156,7 @@ ion-icon:active {
 .services_container .services_box1:hover .face.face1 {
     background: #008080;
     transform: translateY(0);
+    box-shadow: -2rem 0 3rem #002626;
 }
 
 .services_container .services_box .face.face1 .content,
