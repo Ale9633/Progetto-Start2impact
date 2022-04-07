@@ -1273,7 +1273,8 @@ ion-icon:active {
     height: 100%;
     z-index: 1;
     transition: transform .25s ease-in-out .3s;
-    background-color: #f1c236;
+    background: rgb(241,194,54);
+    background: linear-gradient(0deg, rgba(241,194,54,1) 22%, rgba(0,38,38,1) 95%);
 }
 
 .thumbnail:hover:before,
@@ -1346,6 +1347,15 @@ ion-icon:active {
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: -100px;
+    color: #daf1de;
+}
+
+.thumbnail:hover .thumbnail__title,
+.thumbnail1:hover .thumbnail__title {
+    flex-basis: 60px;
+    opacity: 1;
+    transition-delay: 0s, .2s;
+    color: #002626;
 }
 
 .thumbnail__subtitle {
