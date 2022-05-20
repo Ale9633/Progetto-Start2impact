@@ -315,6 +315,11 @@
         height: auto;
     }
 
+    .thumbnail__title {
+        opacity: 1;
+        color: #002626;
+    }
+
     .thumbnail__subtitle {
         opacity: 1;
     }
